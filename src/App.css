@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  display: flex; /* Ensures list items are flex items */
+}
+
+li {
+  margin-right: 10px; /* Adds some space between items */
+}
+a{
+  margin: 20px;
+  text-decoration: none;
+}
+.links{
+  text-decoration: none;
+}

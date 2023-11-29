@@ -1,0 +1,52 @@
+{
+  "data": [
+      {
+        "id": 0,
+        "name": "Magnetic Resonance Imaging (MRI)",
+        "description": "dkljfaklpjdfl;kajdfl;k",
+        "year": 1971,
+        "imageUrl": "https://www.touchstoneimaging.com/wp-content/uploads/2023/07/Knee.MRI_.Tech_.Patient-e1697666165107-1024x629.jpg",
+        "categories": ["Hardware", "Extensions"]
+      },
+    {
+      "id": 1,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://theswiftinstitute.com/wp-content/uploads/2022/08/swift-mri-with-patient.jpg",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 2,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/MRI_of_Human_Brain.jpg",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 3,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://www.touchstoneimaging.com/wp-content/uploads/2023/01/Touchstone-Imaging_Final-2785.MRI_-1-1024x682.jpg",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 4,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://airsmed.com/wp-content/uploads/2023/06/MRI-samples.png",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 5,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://www.caryortho.com/wp-content/uploads/2019/02/The-Latest-in-MRI-Technology.jpg",
+      "categories": ["Hardware", "Extensions"]
+    }
+  ]
+}
