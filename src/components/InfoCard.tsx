@@ -13,7 +13,11 @@ const InfoCard = ({idone, imageUrl, titleText, desc, onClick }: InfoCardParams) 
         <div
             style={{
                 outlineColor: "blue",
-                alignItems: "center"
+                alignItems: "center",
+                border: "1.5px",
+                borderStyle: "solid",
+                borderRadius: "5px",
+                borderColor: "lightblue",
             }}
             onClick={onClick}
         >   <p>{idone}</p>

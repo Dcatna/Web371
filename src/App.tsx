@@ -20,8 +20,6 @@ function App() {
   const objects = useMemo(() => dataJson.data as [MachineData], [])
   const selectedTeb = useState()
   const [selectedItem, setselectedItem] = useState<MachineData | null>(null)
-  
- 
   return (
 <body style = {{
   backgroundColor:"lightgrey",
@@ -32,7 +30,7 @@ function App() {
     <div className="App" style={{
       marginTop: "50px",
       marginLeft:"150px",
-      marginRight:"100px",
+      marginRight:"150px",
       backgroundColor:"white",
 
     }} >
@@ -60,8 +58,27 @@ function App() {
           }}href="#">METHODOLOY</a>
         </div>
       </div>
+
+   
       <InfoCardList items={objects} onItemClick={(item : MachineData) => setselectedItem(item)} />
-    
+
+    <footer>
+      <div style={{
+        paddingTop: "10px",
+        paddingBottom:"30px",
+        backgroundColor: "black",
+        textAlign: "right",
+        flexDirection: "column",
+        
+      }}>
+        <a href="#" style={{
+          color: "white",
+          fontSize: "16px",
+         
+        }}>Learn More!
+        </a>
+      </div>
+    </footer>
     </div>
     
     

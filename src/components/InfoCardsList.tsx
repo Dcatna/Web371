@@ -19,14 +19,12 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
 
     const pusherleft = () => {
         
-        if(items.indexOf(arr[2]) === items.length - 1) {
-       
+        if(items.indexOf(arr[2]) === items.length - 1) { //some crazy
             setarr((prev) => {
                 return [prev[1], prev[2], items[0]]
              })
        }
         else{
-  
             setarr((prev) => {
                  return [prev[1], prev[2], items[items.indexOf(arr[2]) + 1]]
              })
@@ -35,7 +33,6 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
 
     const pusherright = () => {
         if(items.indexOf(arr[0]) === 0) {
-        
             setarr((prev) => {
                 return [items[items.length - 1], prev[0], prev[1]]
              })
@@ -59,12 +56,13 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
         }}>
             <button style={{
                 marginTop: "120px",
+                marginRight: "10px",
                 height: "50px",
                 width: "50px",
 
             }}
 
-                onClick={()=>{pusherleft()}}
+            onClick={()=>{pusherleft()}}
             >
                 left
             </button>
@@ -77,7 +75,7 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
                                 imageUrl={item.imageUrl}
                                 titleText={item.name}
                                 desc={item.description}
-                                onClick={() => onItemClick(item)}
+                                onClick={() => {}}
                             />
                         </li>
                     )
@@ -89,7 +87,7 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
                 width: "50px",
 
             }}
-                onClick={()=>{pusherright()}}
+            onClick={()=>{pusherright()}}
             >
                 right
             </button>
