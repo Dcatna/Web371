@@ -7,15 +7,46 @@ import {useState} from "react";
 
 export type InfoCardListParams = {
     items: MachineData[]
+    onItemClick : (item : MachineData) => void
 }
 
-export const InfoCardList = ({items}: InfoCardListParams) => {
 
-    const [offset, setOffset] = useState(0)
+export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
 
     const [animationParent] = useAutoAnimate()
 
+    const [arr, setarr] = useState<MachineData[]>([items[0],items[1], items[2]]) 
 
+    const pusherleft = () => {
+        
+        if(items.indexOf(arr[2]) === items.length - 1) {
+       
+            setarr((prev) => {
+                return [prev[1], prev[2], items[0]]
+             })
+       }
+        else{
+  
+            setarr((prev) => {
+                 return [prev[1], prev[2], items[items.indexOf(arr[2]) + 1]]
+             })
+        }
+    }
+
+    const pusherright = () => {
+        if(items.indexOf(arr[0]) === 0) {
+        
+            setarr((prev) => {
+                return [items[items.length - 1], prev[0], prev[1]]
+             })
+       }
+        else{
+            setarr((prev) => {
+                 return [items[items.indexOf(arr[0]) - 1], prev[0], prev[1]]
+             })
+        }
+
+    }
     return (
 
         <div style={{
@@ -32,19 +63,21 @@ export const InfoCardList = ({items}: InfoCardListParams) => {
                 width: "50px",
 
             }}
-                onClick={()=>{setOffset((prev) => prev - 1)}}
+
+                onClick={()=>{pusherleft()}}
             >
                 left
             </button>
             <ul ref={animationParent}>
                 {
-                    items.slice(offset, offset + 3).map((item: MachineData) =>
+                    arr.map((item: MachineData) =>
                         <li key={item.id}>
                             <InfoCard
+                                idone = {item.id.toString()}
                                 imageUrl={item.imageUrl}
                                 titleText={item.name}
                                 desc={item.description}
-                                onClick={() => {}}
+                                onClick={() => onItemClick(item)}
                             />
                         </li>
                     )
@@ -56,7 +89,7 @@ export const InfoCardList = ({items}: InfoCardListParams) => {
                 width: "50px",
 
             }}
-                onClick={()=>{setOffset((prev) => prev + 1)}}
+                onClick={()=>{pusherright()}}
             >
                 right
             </button>

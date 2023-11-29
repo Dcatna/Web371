@@ -47,6 +47,30 @@
       "year": 1971,
       "imageUrl": "https://www.caryortho.com/wp-content/uploads/2019/02/The-Latest-in-MRI-Technology.jpg",
       "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 6,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://www.caryortho.com/wp-content/uploads/2019/02/The-Latest-in-MRI-Technology.jpg",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 7,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://www.caryortho.com/wp-content/uploads/2019/02/The-Latest-in-MRI-Technology.jpg",
+      "categories": ["Hardware", "Extensions"]
+    },
+    {
+      "id": 8,
+      "name": "Magnetic Resonance Imaging (MRI)",
+      "description": "dkljfaklpjdfl;kajdfl;k",
+      "year": 1971,
+      "imageUrl": "https://www.caryortho.com/wp-content/uploads/2019/02/The-Latest-in-MRI-Technology.jpg",
+      "categories": ["Hardware", "Extensions"]
     }
   ]
 }

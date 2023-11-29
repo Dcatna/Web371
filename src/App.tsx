@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMemo } from "react";
 import dataJson from "./data.json"
 import './App.css';
 import InfoCardList from "./components/InfoCardsList";
+import { PassThrough } from 'stream';
 
 export type MachineData = {
   id: number
@@ -17,7 +18,10 @@ export type MachineData = {
 function App() {
 
   const objects = useMemo(() => dataJson.data as [MachineData], [])
-
+  const selectedTeb = useState()
+  const [selectedItem, setselectedItem] = useState<MachineData | null>(null)
+  
+ 
   return (
 <body style = {{
   backgroundColor:"lightgrey",
@@ -39,7 +43,9 @@ function App() {
         height: "100%",
   
       }}>
-        <div className='sections'>
+        <div className='sections' style={{
+          paddingTop:"15px",
+        }}>
           <a style = {{
             color:"white",
           }}href="#">HOME</a>
@@ -54,13 +60,10 @@ function App() {
           }}href="#">METHODOLOY</a>
         </div>
       </div>
-      <InfoCardList items={objects} />
+      <InfoCardList items={objects} onItemClick={(item : MachineData) => setselectedItem(item)} />
+    
     </div>
-    <div style={{
-      backgroundColor:"black",
-      width:"100%",
-      height:"100%",
-    }}></div>
+    
     
   </body>
   );

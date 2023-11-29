@@ -1,12 +1,13 @@
 
 export type InfoCardParams = {
+    idone : string
     imageUrl: string
     titleText: string
     desc: string
     onClick: () => void
 }
 
-const InfoCard = ({imageUrl, titleText, desc, onClick }: InfoCardParams) => {
+const InfoCard = ({idone, imageUrl, titleText, desc, onClick }: InfoCardParams) => {
 
     return (
         <div
@@ -15,7 +16,7 @@ const InfoCard = ({imageUrl, titleText, desc, onClick }: InfoCardParams) => {
                 alignItems: "center"
             }}
             onClick={onClick}
-        >
+        >   <p>{idone}</p>
             <p>{titleText}</p>
             <img
                 style={{
