@@ -23,7 +23,7 @@ export const InfoCardList = ({items}: InfoCardListParams) => {
             alignItems: "stretch",
             margin: "auto",
             width: "max-content",
-            backgroundColor: "gray",
+            backgroundColor: "white",
             
         }}>
             <button style={{

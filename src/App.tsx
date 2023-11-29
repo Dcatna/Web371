@@ -20,7 +20,7 @@ function App() {
 
   return (
 <body style = {{
-  backgroundColor:"darkgray",
+  backgroundColor:"lightgrey",
 
 }}>
   
@@ -29,27 +29,30 @@ function App() {
       marginTop: "50px",
       marginLeft:"150px",
       marginRight:"100px",
-      backgroundColor:"gray",
+      backgroundColor:"white",
 
     }} >
+      
       <div className = "links" style={{
         backgroundColor:'black',
         width: "100%",
-
-/*hi*/
+        height: "100%",
+  
       }}>
-        <a style = {{
-          color:"white",
-        }}href="#">HOME</a>
-        <a style = {{
-          color:"white",
-        }}href="#">HARDWARE</a>
-        <a style = {{
-          color:"white",
-        }}href="#">EXTENSIONS</a>
-        <a style = {{
-          color:"white",
-        }}href="#">METHODOLOY</a>
+        <div className='sections'>
+          <a style = {{
+            color:"white",
+          }}href="#">HOME</a>
+          <a style = {{
+            color:"white",
+          }}href="#">HARDWARE</a>
+          <a style = {{
+            color:"white",
+          }}href="#">EXTENSIONS</a>
+          <a style = {{
+            color:"white",
+          }}href="#">METHODOLOY</a>
+        </div>
       </div>
       <InfoCardList items={objects} />
     </div>
@@ -58,6 +61,7 @@ function App() {
       width:"100%",
       height:"100%",
     }}></div>
+    
   </body>
   );
 }
