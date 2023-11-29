@@ -1,13 +1,24 @@
 
 export type InfoCardParams = {
-    idone : string
+    idone : string //id
+    year : number
+    categories : Array<string>
     imageUrl: string
     titleText: string
     desc: string
+    
     onClick: () => void
 }
+const catas = (categories : Array<string>) => {
+    let i = 0
+    let out = ""
+    categories.slice().map((cata : string) => { //disgusting
+        out += " " + cata
+    })
+    return out
+}
 
-const InfoCard = ({idone, imageUrl, titleText, desc, onClick }: InfoCardParams) => {
+const InfoCard = ({year, categories, idone, imageUrl, titleText, desc, onClick }: InfoCardParams) => {
 
     return (
         <div
@@ -22,6 +33,7 @@ const InfoCard = ({idone, imageUrl, titleText, desc, onClick }: InfoCardParams) 
             onClick={onClick}
         >   <p>{idone}</p>
             <p>{titleText}</p>
+            <p>{year}</p>
             <img
                 style={{
                     height: 200,
@@ -30,6 +42,7 @@ const InfoCard = ({idone, imageUrl, titleText, desc, onClick }: InfoCardParams) 
                 src={imageUrl}
                 alt={titleText}
             />
+            <p>{catas(categories)}</p>
             <p>{desc}</p>
         </div>
     )

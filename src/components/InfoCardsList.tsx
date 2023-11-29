@@ -52,6 +52,7 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
             margin: "auto",
             width: "max-content",
             backgroundColor: "white",
+            paddingBottom: "15px",
             
         }}>
             <button style={{
@@ -62,7 +63,7 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
 
             }}
 
-            onClick={()=>{pusherleft()}}
+            onClick={()=>{pusherright()}}
             >
                 left
             </button>
@@ -72,6 +73,8 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
                         <li key={item.id}>
                             <InfoCard
                                 idone = {item.id.toString()}
+                                year = {item.year}
+                                categories= {item.categories}
                                 imageUrl={item.imageUrl}
                                 titleText={item.name}
                                 desc={item.description}
@@ -87,7 +90,7 @@ export const InfoCardList = ({items, onItemClick}: InfoCardListParams) => {
                 width: "50px",
 
             }}
-            onClick={()=>{pusherright()}}
+            onClick={()=>{pusherleft()}}
             >
                 right
             </button>
