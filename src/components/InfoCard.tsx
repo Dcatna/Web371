@@ -10,7 +10,6 @@ export type InfoCardParams = {
     onClick: () => void
 }
 const catas = (categories : Array<string>) => {
-    let i = 0
     let out = ""
     categories.slice().map((cata : string) => { //disgusting
         out += " " + cata
@@ -29,6 +28,7 @@ const InfoCard = ({year, categories, idone, imageUrl, titleText, desc, onClick }
                 borderStyle: "solid",
                 borderRadius: "5px",
                 borderColor: "lightblue",
+                marginBottom:"5px",
             }}
             onClick={onClick}
         >   <p>{idone}</p>
@@ -44,6 +44,12 @@ const InfoCard = ({year, categories, idone, imageUrl, titleText, desc, onClick }
             />
             <p>{catas(categories)}</p>
             <p>{desc}</p>
+            <span style={{
+                display: "block",
+                height:"2px",
+                backgroundColor: "lightblue",
+                marginBottom: "24px"
+            }}></span>
         </div>
     )
 }
